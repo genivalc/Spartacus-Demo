@@ -1,10 +1,11 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
 import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
 import { AppRoutingModule } from "@spartacus/storefront";
 import { AppComponent } from './app.component';
+import { CustomPdpModule } from "./custom-pdp/custom-pdp.module";
 import { SpartacusModule } from './spartacus/spartacus.module';
 
 @NgModule({
@@ -12,12 +13,14 @@ import { SpartacusModule } from './spartacus/spartacus.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     AppRoutingModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
-    SpartacusModule
+    SpartacusModule,
+    BrowserTransferStateModule,
+    CustomPdpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

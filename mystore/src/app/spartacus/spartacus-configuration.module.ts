@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { translationChunksConfig, translations } from "@spartacus/assets";
 import { FeaturesConfig, I18nConfig, OccConfig, provideConfig, SiteContextConfig } from "@spartacus/core";
 import { defaultCmsContentProviders, layoutConfig, mediaConfig } from "@spartacus/storefront";
+import { CustomPdpModule } from '../custom-pdp/custom-pdp.module';
 
 @NgModule({
   declarations: [],
@@ -30,6 +31,7 @@ import { defaultCmsContentProviders, layoutConfig, mediaConfig } from "@spartacu
     features: {
       level: '4.3'
     }
-  })]
+  })  
+]
 })
 export class SpartacusConfigurationModule { }

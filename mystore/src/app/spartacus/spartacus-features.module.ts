@@ -13,6 +13,7 @@ import { CartSavedCartFeatureModule } from './features/cart/cart-saved-cart-feat
 import { CartQuickOrderFeatureModule } from './features/cart/cart-quick-order-feature.module';
 import { CartImportExportFeatureModule } from './features/cart/cart-import-export-feature.module';
 import { AsmFeatureModule } from './features/asm/asm-feature.module';
+import { CustomCartModule } from './features/cart/cart.module';
 
 @NgModule({
   declarations: [],
@@ -67,6 +68,7 @@ import { AsmFeatureModule } from './features/asm/asm-feature.module';
     // Cart Core,
     CartModule.forRoot(),
     CartOccModule,
+    CustomCartModule,
     // Cart UI,
     CartComponentModule,
     WishListModule,
