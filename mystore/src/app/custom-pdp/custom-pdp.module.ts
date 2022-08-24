@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CustomProductIntroComponent } from './custom-product-intro/custom-product-intro.component';
 import { ConfigModule } from '@spartacus/core';
 import { AsmConfig } from '@spartacus/asm/core';
-import { IconModule, ListNavigationModule, ProductSummaryComponent, StarRatingModule } from '@spartacus/storefront';
+import { IconModule, ListNavigationModule, StarRatingModule } from '@spartacus/storefront';
 import { CustomProductSummaryComponent } from './custom-product-summary/custom-product-summary.component';
 
 
